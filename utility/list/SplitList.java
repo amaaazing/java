@@ -23,13 +23,13 @@ public class SplitList {
 
 	public static void main(String[] args) {
 		List<Integer> numbers = Collections.unmodifiableList(
-			    Arrays.asList(5,3,1,2,9,5,0,7)
-			);
-			List<List<Integer>> parts = chopped(numbers, 3);
-			System.out.println(parts); // prints "[[5, 3, 1], [2, 9, 5], [0, 7]]"
-			parts.get(0).add(-1);
-			System.out.println(parts); // prints "[[5, 3, 1, -1], [2, 9, 5], [0, 7]]"
-			System.out.println(numbers); // prints "[5, 3, 1, 2, 9, 5, 0, 7]" (unmodified!)
+			Arrays.asList(5,3,1,2,9,5,0,7)
+		);
+		List<List<Integer>> parts = chopped(numbers, 3);
+		System.out.println(parts); // prints "[[5, 3, 1], [2, 9, 5], [0, 7]]"
+		parts.get(0).add(-1);
+		System.out.println(parts); // prints "[[5, 3, 1, -1], [2, 9, 5], [0, 7]]"
+		System.out.println(numbers); // prints "[5, 3, 1, 2, 9, 5, 0, 7]" (unmodified!)
 	}
 
 }
