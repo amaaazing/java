@@ -6,11 +6,13 @@ import java.util.List;
 public class SplitList {
 
 	// chops a list into non-view sublists of length L
-	public static <T> List<List<T>> chopped(List<T> list, final int L) {
-		final int N = list.size();		
-		if (list == null || N == 0 || L < 1) {
-			return null;
-		}
+	public static <T> List<List<T>> chopped(List<T> list, final int L) {		
+	    if (list == null || list.size() == 0 || L < 1) {
+		  return null;
+	    }
+		
+	    final int N = list.size();
+		
 	    List<List<T>> parts = new ArrayList<List<T>>();
 	    
 	    for (int i = 0; i < N; i += L) {
